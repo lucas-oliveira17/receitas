@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title id="title">Receitas</title>
+</head>
+
+<style>
+    body {
+        background-color: rgb(171, 243, 181);
+    }
+    
+    center {
+        text-align: center;
+    }
+    .campoIngrediente {
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #cabecalho {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #textoIntro{
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+
+    hr {
+        border-top: 2px solid;
+    }
+
+    #result {
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+</style>
+
+<header>
+    <center>
+        <h1 id="cabecalho">Receitas</h1>
+    </center>
+</header>
+<hr />
+<p id="textoIntro">Digite seus ingredientes e encontramos algumas receitas para você!</p>
+
+<body>
+
+    <center><span class="campoIngrediente">Ingrediente:
+            <input type="text" name="fname" id="caixaIngrediente">
+            <button id="btnok">OK</button>
+            <p id="result"></p></center>
+
+    <script src='./dist/main.js' type='text/javascript'></script>
+
+</body>
+
+</html>
