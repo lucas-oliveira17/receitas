@@ -26,6 +26,7 @@
     #camposIngrediente {
         padding-top: 4px;
     }
+
     #cabecalho {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -39,6 +40,10 @@
     #result {
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
     }
+
+    #ingr {
+        margin: 10px;
+    }
 </style>
 
 <header>
@@ -47,20 +52,23 @@
     </center>
 </header>
 <hr />
-<center><p id="textoIntro">Digite seus ingredientes e encontramos algumas receitas para você!</p></center>
+<center>
+    <p id="textoIntro">Digite seus ingredientes e encontramos algumas receitas para você!</p>
+</center>
+
 
 <body>
+
     <center><span class="textoIngredientes">Ingredientes:</center>
-    
-        <center>
-        <section id="camposIngrediente">
-        </div id="add2">
-        <input type="text" name="fname" id="caixaIngrediente">
-        <button id="btnadd">Add</button>
-        <button id="btnok">OK</button>
+
+    <center>
+        <div id="camposIngrediente">
+            <div id="new"></div>
+            <div id="ingr"></div>
+            <button id="btnadd">Add</button>
+            <button id="btnok">OK</button>
+        </div>
         <p id="result"></p>
-        <div id="add">
-        </section>
     </center>
 
     <script src='./dist/main.js' type='text/javascript'></script>

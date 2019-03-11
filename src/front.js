@@ -17,24 +17,31 @@ let toStr = function (ingrediente) {
     return str;
 }
 
-pressOk();
-
-pressAdd();
-
 function pressOk() {
     document.getElementById("btnok").addEventListener("click", function () {
-        document.getElementById("ingrediente");
-        document.getElementById("result").innerHTML = toStr(document.getElementById("caixaIngrediente").value);
+        let ingrediente = document.getElementById("ingr").childNodes;
+        let array = Array.from(ingrediente)
+        array.forEach(campo => {
+            console.log(campo.value);
+        })
     });
 }
 
-function pressAdd() {
-    let counter = 0;
-    document.getElementById("add").addEventListener("click", addInput());
+function addInput() {
+    let counter = 1;
+    document.getElementById("btnadd").addEventListener("click", function () {
 
-    function addInput() {
-        var cx = document.getElementById("caixaIngrediente");
-        document.getElementById("add2").innerHTML += cx;
+        let ingrediente = document.getElementById("ingr");
+
+        let text = "<input type='text' id='campoIngrediente" + counter + "' <style='margin:10px 0px'>";
+
+        ingrediente.appendChild(text);
+
+        document.getElementById("new").appendChild(ingrediente);
         counter++;
-    };
-}
+    })
+};
+
+pressOk();
+
+addInput();
