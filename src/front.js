@@ -7,12 +7,12 @@ let toStr = function (ingrediente) {
     let strIng = "";
     pesquisaPorIngrediente(ingrediente).forEach(receita => {
         receita.ingredientes.forEach(ingrediente => {
-            strIng += "- " + ingrediente + "<br>"
+            strIng += `- ${ingrediente} <br>`
         })
-        str += "Nome: " + receita.nome + "<br>" +
-            "Autor: " + receita.autor + "<br>" +
-            "Ingredientes: " + strIng +
-            "Modo de Preparo: " + receita.modoDePreparo + "<br><br>"
+        str += `Nome: ${receita.nome} <br>` +
+            `Autor: ${receita.autor} <br>` +
+            `Ingredientes: ${strIng}` +
+            `Modo de Preparo: ${receita.modoDePreparo} <br><br>`
     })
     return str;
 }
@@ -21,15 +21,16 @@ function pressOk() {
     document.getElementById("btnok").addEventListener("click", function () {
         let ingrediente = pegarFilhos("ingrediente");
         let arrayDeFilhos = passarFilhosParaArray(ingrediente)
+        let valoresDosFilhos = [];
         arrayDeFilhos.forEach(filhoIngrediente => {
-            console.log(filhoIngrediente.value);
-            document.getElementById("result").innerHTML += toStr(filhoIngrediente.value);
+            valoresDosFilhos.push(filhoIngrediente.value);
         })
+        document.getElementById("result").innerHTML += toStr(valoresDosFilhos);
     });
 }
 
-function passarFilhosParaArray(ingrediente) {
-    return Array.from(ingrediente);
+function passarFilhosParaArray(elemento) {
+    return Array.from(elemento);
 }
 
 function pegarFilhos(elemento) {
@@ -44,7 +45,7 @@ function addInput() {
 
         let text = document.createElement("input");
 
-        text.innerHTML = "<input type='text' id='campoIngrediente" + counter + "'";
+        text.innerHTML = "<input type='text' id='campoIngrediente" + counter + "'>";
         text.setAttribute("style", "margin: 8px 350px");
 
         ingrediente.appendChild(text);

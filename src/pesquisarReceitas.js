@@ -6,9 +6,7 @@ let receitas = [];
 
 export let pesquisaPorIngrediente = function (ingredienteInput) {
     receitas = receitasProntas.filter(receita => {
-        return receita.ingredientes.some(ingrediente => {
-            return ingrediente === ingredienteInput;
-        });
+        return ingredienteInput.every(ingr => receita.ingredientes.includes(ingr));
     });
     return receitas;
 }
