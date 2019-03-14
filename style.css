@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'coffe';
+    src: url('/font/coffe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+hr {
+    margin-top:0;
+    margin-bottom: 0;
+    border: 1px solid;
+}
+
+header {
+    background-color:#f8b460;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; 
+    border:1px;
+}
+
+#cabecalho {
+    font-family: 'coffe';
+    line-height: 100px;
+    font-size: 40px;
+}
+
+h1 {
+    margin-top: 0;
+    height: 80px;
+}
+
+body {
+    background-color:#f8b460;
+    margin:0; 
+    padding:0;
+}
+
+center {
+    text-align: center;
+}
+
+#textoIntro{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textoIngredientes {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#result {
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.camposIngrediente {
+    padding-top: 4px;
+}
+.camposIngrediente button {
+background-color:#faa741;
+-moz-border-radius:28px;
+-webkit-border-radius:28px;
+border-radius:28px;
+border:1px solid #f09b09;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-family:Arial;
+font-size:20px;
+padding:3px 17px;
+text-decoration:none;
+text-shadow:0px 3px 0px #cc9f52;
+}
+.camposIngrediente button:hover {
+background-color:#fa9519;
+}
+.camposIngrediente button:active {
+position:relative;
+top:1px;
+}
+
+#btnok {
+    font-size: 15;
+}
