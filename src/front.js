@@ -2,30 +2,35 @@ import {
     pesquisaPorIngrediente
 } from "./pesquisarReceitas"
 
-let toStr = function (ingrediente) {
-    let str = "";
-    let strIng = "";
+ let printaReceita = function (ingrediente) {
+    let receitaOutput = "";
+    let ingredientesReceita = "";
+
     pesquisaPorIngrediente(ingrediente).forEach(receita => {
-        receita.ingredientes.forEach(ingrediente => strIng += `- ${ingrediente} <br>` );
-        str += `Nome: ${receita.nome} <br>` +
-               `Autor: ${receita.autor} <br>` +
-               `Ingredientes: ${strIng}` +
-               `Modo de Preparo: ${receita.modoDePreparo} <br><br>`
+        receita.ingredientes.forEach(ingrediente => ingredientesReceita += `<li> ${ingrediente} </li>` );
+        receitaOutput += `<ul>
+                <li>Nome: ${receita.nome} </li>
+                <li>Autor: ${receita.autor} </li>
+                <li>Ingredientes:<ul> ${ingredientesReceita}</ul></li>
+                <li>Modo de Preparo: ${receita.modoDePreparo} </li>
+                </ul>`
     })
-    return str;
+
+    return receitaOutput;
 }
 
 function pressOk() {
     document.getElementById("btnok").addEventListener("click", function () {
         let ingrediente = pegarFilhos("ingrediente");
         let arrayDeFilhos = passarFilhosParaArray(ingrediente);
-        let valoresDosFilhos = [];
+        let inputIngrediente = [];
         arrayDeFilhos.forEach(filhoIngrediente => {
+            
             if (filhoIngrediente.value.length > 1){
-            valoresDosFilhos.push(filhoIngrediente.value);
+            inputIngrediente.push(filhoIngrediente.value);
             }
         })
-        document.getElementById("result").innerHTML += toStr(valoresDosFilhos);
+        document.getElementById("result").innerHTML += printaReceita(inputIngrediente);
     });
 }
 

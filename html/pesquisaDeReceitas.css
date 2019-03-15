@@ -53,8 +53,13 @@ center {
 
 
 #result {
+    display:inline-table;
     font-size: 20px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+li {
+    display: flex;
 }
 
 .camposIngrediente {
