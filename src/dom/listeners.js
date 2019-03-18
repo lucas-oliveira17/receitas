@@ -1,9 +1,10 @@
-import { getIngredientesInput, printaReceita, createHtmlInput, pendurarInput } from "./front"
+import { getIngredientesInput, createHtmlInput, pendurarInput } from "../dom/manipuladorFilhos"
+import { printReceitas } from "../toString"
 
 function pressOk() {
     document.getElementById("btnok").addEventListener("click", function () {
         let inputIngrediente = getIngredientesInput();
-        document.getElementById("result").innerHTML += printaReceita(inputIngrediente);
+        document.getElementById("result").innerHTML += printReceitas(inputIngrediente);
     });
 }
 

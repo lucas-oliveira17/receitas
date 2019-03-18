@@ -1,7 +1,7 @@
-import  { printaReceita } from "./front"
+import  { printReceitas } from "../toString"
 
 test('retorno do printaReceita',  () => {
-    expect(printaReceita(["1 Limão", "1L de Vodka"])).toBe(
+    expect(printReceitas(["1 Limão", "1L de Vodka"])).toBe(
     `<ul>
                 <li>Nome: Caipirinha da Jessikill </li>
                 <li>Autor: Jessikill </li>

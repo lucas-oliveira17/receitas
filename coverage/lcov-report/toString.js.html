@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for receitasProntas.js</title>
+    <title>Code coverage report for toString.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="index.html">All files</a> receitasProntas.js
+      <a href="index.html">All files</a> toString.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/0</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>9/9</span>
       </div>
     </div>
     <p class="quiet">
@@ -52,19 +52,55 @@
 <a name='L4'></a><a href='#L4'>4</a>
 <a name='L5'></a><a href='#L5'>5</a>
 <a name='L6'></a><a href='#L6'>6</a>
-<a name='L7'></a><a href='#L7'>7</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { criarReceita } from './criarReceita'
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { pesquisaPorIngrediente } from "./pesquisarReceitas"
 &nbsp;
-export let receitasProntas = [criarReceita("Bolo de Fubá", "Maria", ["4 xícaras de Farinha", "1 saco de Fubá", "2 ovos"], "Blablabla"),
-                       criarReceita("Bolo de Milho", "João", ["1 Lata de Milho", "2 colheres de Açúcar", "4 xícaras de Farinha"], "Blablabla"),
-                       criarReceita("Salada Oriental de Arroz com Frango", "Jorge", ["1/2 Xícara de Arroz", "1 Limão", "1 Peito de Frango"], "Blablabla"),
-                       criarReceita("Sanduíche de Frango com Maçã", "Bianca", ["2 Maçãs Fuji", "1 Peito de frango", "2 Fatias de Pão"], "Blablabla"),
-                       criarReceita("Caipirinha da Jessikill", "Jessikill", ["1 Limão", "1L de Vodka"], "Blabla")]</pre></td></tr>
+export let printReceitas = function (ingrediente) {
+    let receitaOutput = "";
+    let ingredientesReceita = "";
+    pesquisaPorIngrediente(ingrediente).forEach(receita =&gt; {
+        ingredientesReceita = "";
+        receita.ingredientes.forEach(ingrediente =&gt; {
+            ingredientesReceita += `&lt;li&gt; ${ingrediente} &lt;/li&gt;` });
+        receitaOutput += `&lt;ul&gt;
+                &lt;li&gt;Nome: ${receita.nome} &lt;/li&gt;
+                &lt;li&gt;Autor: ${receita.autor} &lt;/li&gt;
+                &lt;li&gt;Ingredientes:&lt;ul&gt; ${ingredientesReceita}&lt;/ul&gt;&lt;/li&gt;
+                &lt;li&gt;Modo de Preparo: ${receita.modoDePreparo} &lt;/li&gt;
+                &lt;/ul&gt;`
+            })
+&nbsp;
+            return receitaOutput;
+        }</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

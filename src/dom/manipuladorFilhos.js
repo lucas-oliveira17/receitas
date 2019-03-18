@@ -1,23 +1,3 @@
-import { pesquisaPorIngrediente } from "./pesquisarReceitas"
-
-export let printaReceita = function (ingrediente) {
-    let receitaOutput = "";
-    let ingredientesReceita = "";
-    pesquisaPorIngrediente(ingrediente).forEach(receita => {
-        ingredientesReceita = "";
-        receita.ingredientes.forEach(ingrediente => {
-            ingredientesReceita += `<li> ${ingrediente} </li>` });
-        receitaOutput += `<ul>
-                <li>Nome: ${receita.nome} </li>
-                <li>Autor: ${receita.autor} </li>
-                <li>Ingredientes:<ul> ${ingredientesReceita}</ul></li>
-                <li>Modo de Preparo: ${receita.modoDePreparo} </li>
-                </ul>`
-            })
-
-            return receitaOutput;
-        }
-
 export function getIngredientesInput() {
     let ingrediente = pegarFilhos("ingrediente");
     let arrayDeFilhos = passarFilhosParaArray(ingrediente);
