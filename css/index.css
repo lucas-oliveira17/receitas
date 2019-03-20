@@ -1,5 +1,7 @@
 header {
-    text-align:center;
+    text-align: center;
+    background-image: linear-gradient(to top, #f8b460, #fa9d2c);
+    height: 50%;
 }
 
 #cabecalho {

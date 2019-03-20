@@ -1,9 +1,12 @@
 var webpack = require('webpack')
 
 module.exports = {
-    entry: "./src/dom/listeners.js",
+    entry: {
+      pesquisa: "./src/dom/listenersPesquisa.js",
+      cadastro: "./src/dom/listenersCadastro.js"
+    },
     mode: "development",
     output: {
-        filename: 'main.js'
+        filename: '[name].js'
       }
 }

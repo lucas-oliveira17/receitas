@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/dom/listeners.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/dom/listenersPesquisa.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -98,27 +98,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
-/***/ "./src/dom/listeners.js":
-/*!******************************!*\
-  !*** ./src/dom/listeners.js ***!
-  \******************************/
+/***/ "./src/dom/listenersPesquisa.js":
+/*!**************************************!*\
+  !*** ./src/dom/listenersPesquisa.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dom_manipuladorFilhos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dom/manipuladorFilhos */ \"./src/dom/manipuladorFilhos.js\");\n/* harmony import */ var _toString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toString */ \"./src/toString.js\");\n\r\n\r\n\r\nfunction pressOk() {\r\n    document.getElementById(\"btnok\").addEventListener(\"click\", function () {\r\n        let inputIngrediente = Object(_dom_manipuladorFilhos__WEBPACK_IMPORTED_MODULE_0__[\"getIngredientesInput\"])();\r\n        document.getElementById(\"result\").innerHTML += Object(_toString__WEBPACK_IMPORTED_MODULE_1__[\"printReceitas\"])(inputIngrediente);\r\n    });\r\n}\r\n\r\nfunction addInput() {\r\n    let counter = 1;\r\n    \r\n    document.getElementById(\"btnadd\").addEventListener(\"click\", function () {\r\n\r\n        let { ingrediente, text } = Object(_dom_manipuladorFilhos__WEBPACK_IMPORTED_MODULE_0__[\"createHtmlInput\"])(counter);\r\n\r\n        Object(_dom_manipuladorFilhos__WEBPACK_IMPORTED_MODULE_0__[\"pendurarInput\"])(ingrediente, text);\r\n\r\n        counter++;\r\n    });\r\n};\r\n\r\naddInput();\r\npressOk();\n\n//# sourceURL=webpack:///./src/dom/listeners.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _manipuladorInput__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./manipuladorInput */ \"./src/dom/manipuladorInput.js\");\n/* harmony import */ var _toString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../toString */ \"./src/toString.js\");\n\r\n\r\n\r\nfunction addInput() {\r\n    let counter = 1;\r\n    \r\n    document.getElementById(\"btnadd\").addEventListener(\"click\", function () {\r\n\r\n        let text = Object(_manipuladorInput__WEBPACK_IMPORTED_MODULE_0__[\"createHtmlIngredienteInput\"])(counter);\r\n        text.setAttribute(\"style\", \"margin:0.5% 30%\");\r\n        let ingrediente = document.getElementById(\"ingrediente\");\r\n\r\n        Object(_manipuladorInput__WEBPACK_IMPORTED_MODULE_0__[\"pendurarInput\"])(ingrediente, text);\r\n\r\n        counter++;\r\n    });\r\n};\r\n\r\nfunction pressOk() {\r\n    document.getElementById(\"btnok\").addEventListener(\"click\", function () {\r\n        let inputIngrediente = Object(_manipuladorInput__WEBPACK_IMPORTED_MODULE_0__[\"getConteudoInput\"])(\"ingrediente\");\r\n        document.getElementById(\"result\").innerHTML += Object(_toString__WEBPACK_IMPORTED_MODULE_1__[\"printReceitas\"])(inputIngrediente);\r\n    });\r\n}\r\n\r\naddInput();\r\npressOk();\n\n//# sourceURL=webpack:///./src/dom/listenersPesquisa.js?");
 
 /***/ }),
 
-/***/ "./src/dom/manipuladorFilhos.js":
-/*!**************************************!*\
-  !*** ./src/dom/manipuladorFilhos.js ***!
-  \**************************************/
-/*! exports provided: getIngredientesInput, createHtmlInput, pendurarInput */
+/***/ "./src/dom/manipuladorInput.js":
+/*!*************************************!*\
+  !*** ./src/dom/manipuladorInput.js ***!
+  \*************************************/
+/*! exports provided: getConteudoInput, createHtmlIngredienteInput, pendurarInput */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getIngredientesInput\", function() { return getIngredientesInput; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createHtmlInput\", function() { return createHtmlInput; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"pendurarInput\", function() { return pendurarInput; });\nfunction getIngredientesInput() {\r\n    let ingrediente = pegarFilhos(\"ingrediente\");\r\n    let arrayDeFilhos = passarFilhosParaArray(ingrediente);\r\n    let inputIngrediente = [];\r\n    arrayDeFilhos.forEach(filhoIngrediente => {\r\n        if (filhoIngrediente.value.length > 1) {\r\n            inputIngrediente.push(filhoIngrediente.value);\r\n        }\r\n    });\r\n    return inputIngrediente;\r\n}\r\n\r\nfunction passarFilhosParaArray(elemento) {\r\n    return Array.from(elemento);\r\n}\r\n\r\nfunction pegarFilhos(elemento) {\r\n    return document.getElementById(elemento).childNodes;\r\n}\r\n\r\nfunction createHtmlInput(counter) {\r\n    let ingrediente = document.getElementById(\"ingrediente\");\r\n    let text = document.createElement(\"input\");\r\n    text.innerHTML = \"<input type='text' id='campoIngrediente\" + counter + \"'>\";\r\n    text.setAttribute(\"style\", \"margin:0.5% 30%\");\r\n    return { ingrediente, text };\r\n}\r\n\r\nfunction pendurarInput(ingrediente, text) {\r\n    ingrediente.appendChild(text);\r\n    console.log(ingrediente);\r\n    document.getElementById(\"new\").appendChild(ingrediente);\r\n}\r\n\n\n//# sourceURL=webpack:///./src/dom/manipuladorFilhos.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getConteudoInput\", function() { return getConteudoInput; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createHtmlIngredienteInput\", function() { return createHtmlIngredienteInput; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"pendurarInput\", function() { return pendurarInput; });\nfunction getConteudoInput(elemento) {\r\n    let filhos = pegarFilhos(elemento);\r\n    let arrayDeFilhos = passarFilhosParaArray(filhos);\r\n    let input = [];\r\n    arrayDeFilhos.forEach(filho => {\r\n        if (filho.value.length > 1) {\r\n            input.push(filho.value);\r\n        }\r\n    });\r\n    return input;\r\n}\r\n\r\nfunction passarFilhosParaArray(elemento) {\r\n    return Array.from(elemento);\r\n}\r\n\r\nfunction pegarFilhos(elemento) {\r\n    return document.getElementById(elemento).childNodes;\r\n}\r\n\r\nfunction createHtmlIngredienteInput(counter) {\r\n    let text = document.createElement(\"li\");\r\n    text.innerHTML = \"<input type='text' id='campoIngrediente\" + counter + \"'></li>\";\r\n    return text;\r\n}\r\n\r\nfunction pendurarInput(elemento, text) {\r\n    elemento.appendChild(text);\r\n    console.log(elemento);\r\n}\n\n//# sourceURL=webpack:///./src/dom/manipuladorInput.js?");
 
 /***/ }),
 
