@@ -1,6 +1,7 @@
 import { criarReceita } from "./criarReceita";
 import { receitasProntas } from "./receitasProntas";
 
-let cadastrarReceita = function(receita){
-    receitasProntas.push(criarReceita(receita.nome, receita.autor, receita.ingredientes, receita.modoDePreparo));
+export let cadastrarReceita = function(conteudoCadastro){
+    receitasProntas.push(criarReceita(conteudoCadastro[0], conteudoCadastro[1], conteudoCadastro[3], conteudoCadastro[2]));
+    console.log(receitasProntas);
 }

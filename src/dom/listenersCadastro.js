@@ -1,26 +1,20 @@
-import { getConteudoInput, createHtmlIngredienteInput, pendurarInput } from "./manipuladorInput";
-
-function addIngrediente() {
-    let counter = 1;
-    
-    document.getElementById("btnadd").addEventListener("click", function () {
-
-        let text = createHtmlIngredienteInput(counter);
-        let ingrediente = document.getElementById("ingrediente");
-
-        pendurarInput(ingrediente, text);
-
-        counter++;
-    });
-};
+import {
+    getConteudoCadastroReceita
+} from "./manipuladorInput";
+import {
+    addIngrediente
+} from "./listeners";
+import {
+    cadastrarReceita
+} from "../cadastrarReceita";
 
 function pressCadastrar() {
     document.getElementById("btncadastrar").addEventListener("click", function () {
-        let receita = getConteudoInput("camposCadastro");
-        cadastrarReceita(receita);
+        let conteudoCadastro = getConteudoCadastroReceita("camposCadastro");
+        cadastrarReceita(conteudoCadastro);
         document.getElementById("result").innerHTML += "Receita cadastrada com sucesso!";
     });
 }
 
-addIngrediente();
+addIngrediente("listIngredienteul");
 pressCadastrar();
