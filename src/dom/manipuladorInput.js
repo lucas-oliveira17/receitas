@@ -1,38 +1,33 @@
-export function getConteudoPesquisaIngredientes(elemento) {
-    let filhos = pegarFilhos(elemento);
-    let arrayDeFilhos = passarFilhosParaArray(filhos);
+export function retirarValoresInput(elemento) {
+    let nos = pegarNos(elemento);
+    console.log(nos);
+    let arrayDeNos = passarNosParaArray(nos);
     let input = [];
-    arrayDeFilhos.forEach(filho => {
-        if (filho.value.length > 1) {
-            input.push(filho.value);
-        }
+    arrayDeNos.forEach(no => {
+        input.push(no.children[0].value);
     });
     return input;
 }
 
-function passarFilhosParaArray(elemento) {
+function passarNosParaArray(elemento) {
     return Array.from(elemento);
 }
 
-function pegarFilhos(elemento) {
-    console.log(document.getElementById(elemento));
+function pegarNos(elemento) {
     return document.getElementById(elemento).childNodes;
 }
 
-export function getConteudoCadastroReceita() {
+export function retirarValoresInputCadastroReceita() {
 
-    let receita = [];
-    let ingredientes = [];
-
-    receita = [document.querySelector('input[name="nome"]').value, document.querySelector('input[name="autor"]').value,
+    let receita = [document.querySelector('input[name="nome"]').value, document.querySelector('input[name="autor"]').value,
         document.querySelector('input[name="modopreparo"]').value
     ];
 
-    const camposIngredienteAdicionados = document.querySelector('ul[id="listIngredienteul"').children[1].children;
+    const listIngredienteUlFilhoLi = document.querySelector('ul[id="listIngredienteul"').children[0];
+    let ingredientes = [listIngredienteUlFilhoLi.children[0].value];
 
-    ingredientes.push(document.querySelector('ul[id="listIngredienteul"').children[0].children[0].value);
-
-    if (camposIngredienteAdicionados.length > 0) {
+    if (document.querySelector('ul[id="listIngredienteul"').children[1] !== undefined) {
+        const camposIngredienteAdicionados = document.querySelector('ul[id="listIngredienteul"').children[1].children;
         let campo;
         for (campo in camposIngredienteAdicionados) {
             const conteudoCampoAtual = camposIngredienteAdicionados[campo].value;
@@ -41,10 +36,7 @@ export function getConteudoCadastroReceita() {
             }
         }
     }
-
     receita.push(ingredientes);
-    console.log(receita);
-    
     return receita;
 }
 
@@ -57,5 +49,4 @@ export function createHtmlIngredienteInput(counter) {
 
 export function pendurarInput(elemento, text) {
     elemento.appendChild(text);
-    console.log(elemento);
 }

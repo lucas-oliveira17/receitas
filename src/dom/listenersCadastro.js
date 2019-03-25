@@ -1,18 +1,12 @@
-import {
-    getConteudoCadastroReceita
-} from "./manipuladorInput";
-import {
-    addIngrediente
-} from "./listeners";
-import {
-    cadastrarReceita
-} from "../cadastrarReceita";
+import { retirarValoresInputCadastroReceita } from "./manipuladorInput";
+import { addIngrediente } from "./listeners";
+import { cadastrarReceita } from "../cadastrarReceita";
 
 function pressCadastrar() {
     document.getElementById("btncadastrar").addEventListener("click", function () {
-        let conteudoCadastro = getConteudoCadastroReceita("camposCadastro");
+        let conteudoCadastro = retirarValoresInputCadastroReceita("camposCadastro");
         cadastrarReceita(conteudoCadastro);
-        document.getElementById("result").innerHTML += "Receita cadastrada com sucesso!";
+        document.getElementById("result").innerHTML += `Receita cadastrada com sucesso!`;
     });
 }
 

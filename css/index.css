@@ -16,43 +16,13 @@ h1 {
 }
 
 hr {
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
     border: 1px solid;
 }
 
 body {
-    background-color:#f8b460;
+    background-color: #f8b460;
     margin: 0;
     padding: 0;
 }
-
-.menu {
-    text-align: center;
-}
-
-.menu li {
-    background-color:#faa741;
-    -moz-border-radius:28px;
-    -webkit-border-radius:28px;
-    border-radius:28px;
-    border:1px solid #f09b09;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:20px;
-    padding:3px 17px;
-    text-decoration:none;
-    text-shadow:0px 3px 0px #cc9f52;
-    margin:5px;
-}
-
-.menu button:hover {
-    background-color:#fa9519;
-    }
-
-.menu button:active {
-    position:relative;
-    top:1px;
-    }

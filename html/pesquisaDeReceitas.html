@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link href="../css/pesquisaDeReceitas.css" rel="stylesheet" type="text/css">
+<link href="../css/navbar.css" rel="stylesheet" type="text/css">
 
 <head>
 	<meta charset="utf-8">
@@ -14,13 +15,13 @@
 <hr />
 
 <body>
-	<div class="menu">
+	<nav id="menu">
 		<ul>
 			<li id="linkHome" onclick="location.href='index.html'">Home</li>
 			<li id="linkPesquisaReceitas" onclick="location.href='pesquisaDeReceitas.html'">Pesquisar Receitas</li>
 			<li id="linkCadastroReceitas" onclick="location.href='cadastroDeReceitas.html'">Cadastrar Receitas</li>
 		</ul>
-	</div>
+	</nav>
 	<p id="textoIntro">Digite seus ingredientes e encontramos algumas receitas para você!</p>
 
 	<span class="textoIngredientes">Ingredientes:
@@ -33,6 +34,7 @@
 		<div id="result"></div>
 
 		<script src='../dist/pesquisa.js' type='text/javascript'></script>
+		<script src="../src/navbar.js"></script>
 </body>
 
 </html>

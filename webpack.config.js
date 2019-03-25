@@ -4,7 +4,8 @@ module.exports = {
     entry: {
       listeners: "./src/dom/listeners.js",
       pesquisa: "./src/dom/listenersPesquisa.js",
-      cadastro: "./src/dom/listenersCadastro.js"
+      cadastro: "./src/dom/listenersCadastro.js",
+      navbar: "./src/navbar.js"
     },
     mode: "development",
     output: {

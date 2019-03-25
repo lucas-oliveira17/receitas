@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link href="../css/cadastroDeReceitas.css" rel="stylesheet" type="text/css">
+<link href="../css/navbar.css" rel="stylesheet" type="text/css">
 
 <head>
 	<meta charset="utf-8">
@@ -12,32 +13,28 @@
 <hr />
 
 <body>
-	<div class="menu">
-		<ul>
-			<li id="linkHome" onclick="location.href='index.html'">Home</li>
-			<li id="linkPesquisaReceitas" onclick="location.href='pesquisaDeReceitas.html'">Pesquisar Receitas</li>
-			<li id="linkCadastroReceitas" onclick="location.href='cadastroDeReceitas.html'">Cadastrar Receitas</li>
-		</ul>
-	</div>
+
+	<nav id="menu"></nav>
 
 	<p id="textoIntro">Compartilhe sua receita com a nossa comunidade!</p>
 
 	<div class="areaCadastro">
 		<ul class="camposCadastro">
-			<li id="nomeli">Nome: <input type="text" name="nome" id="nameid"></li>
-			<li id="autorli">Autor: <input type="text" name="autor" id="autorid"></li>
-			<li id="ingredienteli">
+			<li class="nomeli">Nome: <input type="text" name="nome" id="nameid"></li>
+			<li class="autorli">Autor: <input type="text" name="autor" id="autorid"></li>
+			<li class="ingredienteli">
 					<ul id="listIngredienteul"> <li>Ingredientes: <input type="text" name="ingrediente" id="campoIngrediente0"> <button id="btnadd">+</button>
 						</li>
 				</ul>
 			</li>
-			<li id="modopreparoli">Modo de Preparo: <input type="text" name="modopreparo" id="modopreparoid"></li>
+			<li class="modopreparoli">Modo de Preparo: <input type="text" name="modopreparo" id="modopreparoid"></li>
 		</ul>
 		<button id="btncadastrar">Cadastrar</button>
 	</div>
 	<div id="result"></div>
 
 	<script src='../dist/cadastro.js' type='text/javascript'></script>
+	<script src="../src/navbar.js"></script>
 </body>
 
 </html>

@@ -49,29 +49,18 @@ body {
     margin: 5px;
 }
 
-.menu li:hover {
-    background-color: #fa9519;
-}
-
-.menu li:active {
-    position: relative;
-    top: 1px;
-}
-
-#textoIntro {
+#textoIntro{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.camposCadastro {
-    display: block;
-}
-
-.areaCadastro {
+.camposCadastro{
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.areaCadastro button {
+.areaCadastro #btnadd {
     background-color: #faa741;
     border: 1px solid #f09b09;
     display: inline-block;
@@ -82,11 +71,11 @@ body {
     text-shadow: 0px 3px 0px #cc9f52;
 }
 
-.areaCadastro button:hover {
+.areaCadastro #btnadd:hover {
     background-color: #fa9519;
 }
 
-.areaCadastro button:active {
+.areaCadastro #btnadd:active {
     position: relative;
     top: 1px;
 }
@@ -120,4 +109,9 @@ body {
 
 #new {
     margin-top: -3%;
+}
+
+#result {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
