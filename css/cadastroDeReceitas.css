@@ -55,10 +55,21 @@ body {
 }
 
 .camposCadastro{
-    display: flex;
+    display: table-caption;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: darkgreen;
 }
+
+.camposCadastro label {
+    background-color: red;
+}
+
+.areaCadastro{
+    background-color: darkred;
+    display:inline-table;
+}
+
 
 .areaCadastro #btnadd {
     background-color: #faa741;
