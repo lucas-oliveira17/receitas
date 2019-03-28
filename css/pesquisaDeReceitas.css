@@ -68,15 +68,19 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.camposIngrediente li {
-    display: block;
-}
-
-.camposIngrediente {
+.camposIngredientePesquisa {
     padding-top: 4px;
 }
 
-.camposIngrediente button {
+.camposIngredientePesquisa input{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 3px;
+}
+
+.camposIngredientePesquisa button {
     background-color: #faa741;
     -moz-border-radius: 28px;
     -webkit-border-radius: 28px;
@@ -92,11 +96,11 @@ body {
     text-shadow: 0px 3px 0px #cc9f52;
 }
 
-.camposIngrediente button:hover {
+.camposIngredientePesquisa button:hover {
     background-color: #fa9519;
 }
 
-.camposIngrediente button:active {
+.camposIngredientePesquisa button:active {
     position: relative;
     top: 1px;
 }

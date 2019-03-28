@@ -23,17 +23,13 @@ export function retirarValoresInputCadastroReceita() {
         document.querySelector('input[name="modopreparo"]').value
     ];
 
-    const listIngredienteUlFilhoLi = document.querySelector('ul[id="listIngredienteul"').children[0];
-    let ingredientes = [listIngredienteUlFilhoLi.children[0].value];
+    const ingredienteLiFilhos = document.querySelector('ul[id="camposIngrediente"').children;
+    let ingredientes = [];
+    let campo;
 
-    if (document.querySelector('ul[id="listIngredienteul"').children[1] !== undefined) {
-        const camposIngredienteAdicionados = document.querySelector('ul[id="listIngredienteul"').children[1].children;
-        let campo;
-        for (campo in camposIngredienteAdicionados) {
-            const conteudoCampoAtual = camposIngredienteAdicionados[campo].value;
-            if (conteudoCampoAtual !== undefined) {
-                ingredientes.push(conteudoCampoAtual);
-            }
+    for (campo in ingredienteLiFilhos) {
+        if (campo > 0) {
+            ingredientes.push(ingredienteLiFilhos[campo].children[0].value);
         }
     }
     receita.push(ingredientes);
@@ -43,7 +39,7 @@ export function retirarValoresInputCadastroReceita() {
 export function createHtmlIngredienteInput(counter) {
     let text = document.createElement("li");
     text.setAttribute("name", "ingrediente")
-    text.innerHTML = "<input type='text' id='campoIngrediente" + counter + "'></li>";
+    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngrediente" + counter + "'></li>";
     return text;
 }
 

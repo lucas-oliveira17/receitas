@@ -1,6 +1,5 @@
-import { retirarValoresInput } from "./manipuladorInput";
+import { retirarValoresInput, createHtmlIngredienteInput, pendurarInput } from "./manipuladorInput";
 import { printReceitas } from "../toString";
-import { addIngrediente } from "./listeners";
 
 function pressOk() {
     document.getElementById("btnok").addEventListener("click", function () {
@@ -9,5 +8,18 @@ function pressOk() {
     });
 }
 
-addIngrediente("ingrediente");
+export function addIngredientePesquisa(elemento) {
+    let counter = 1;
+    document.getElementById("btnaddpesquisa").addEventListener("click", function () {
+
+        let text = createHtmlIngredienteInput(counter);
+        let filho = document.getElementById(elemento);
+
+        pendurarInput(filho, text);
+
+        counter++;
+    });
+};
+
+addIngredientePesquisa("ingrediente");
 pressOk();

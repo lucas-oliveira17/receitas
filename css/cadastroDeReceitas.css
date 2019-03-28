@@ -1,18 +1,14 @@
-header {
-    text-align: center;
-    background-image: linear-gradient(to top, #f8b460, #fa9d2c);
-    height: 50%;
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
 }
 
-#cabecalho {
+.palavracabecalho {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 100px;
-    font-size: 40px;
-}
-
-h1 {
     margin-top: 0;
-    height: 80px;
+    margin-left: 35px;
+    font-size: 25px;
+    margin-top: 10px;
 }
 
 hr {
@@ -22,71 +18,74 @@ hr {
 }
 
 body {
-    text-align: center;
     background-color: #f8b460;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.menu {
+.centerCadastro {
     text-align: center;
 }
 
-.menu li {
-    background-color: #faa741;
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 1px solid #f09b09;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 20px;
-    padding: 3px 17px;
-    text-decoration: none;
-    text-shadow: 0px 3px 0px #cc9f52;
-    margin: 5px;
-}
-
-#textoIntro{
+#textoIntro {
+    text-align: center;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.camposCadastro{
-    display: table-caption;
-    flex-direction: column;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: darkgreen;
+.areaCadastro {
+    display: inline-grid;
+    border: solid black 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
 }
 
-.camposCadastro label {
-    background-color: red;
-}
-
-.areaCadastro{
-    background-color: darkred;
-    display:inline-table;
-}
-
-
-.areaCadastro #btnadd {
-    background-color: #faa741;
-    border: 1px solid #f09b09;
+.camposCadastro {
+    text-align: center;
     display: inline-block;
+}
+
+.camposCadastro li {
+    border-radius: 10px;
+    margin-top: 4px;
+    display: flex;
+    margin-right: 25px;
+
+}
+
+.camposCadastro input {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 3px;
+}
+
+.camposCadastro #camposIngredienteCadastro {
+    display: contents;
+}
+
+.areaCadastro #btnaddcadastro {
+    background-color: #f8b460;
+    border: none;
     cursor: pointer;
-    color: #ffffff;
+    font-size: 20px;
+    color: #e47c05;
     font-family: Arial;
     text-decoration: none;
-    text-shadow: 0px 3px 0px #cc9f52;
+    height: 20px;
 }
 
-.areaCadastro #btnadd:hover {
-    background-color: #fa9519;
+.areaCadastro #btnaddcadastro:hover {
+    color: #fa9519;
 }
 
-.areaCadastro #btnadd:active {
+.areaCadastro #btnaddcadastro:active {
     position: relative;
     top: 1px;
 }
@@ -104,9 +103,9 @@ body {
     font-size: 17px;
     text-decoration: none;
     text-shadow: 0px 3px 0px #cc9f52;
-    margin: 1.8%;
-    margin-top: -8%;
-    margin-right: 7%;
+    margin-bottom: 3%;
+    width: 37%;
+    margin-left: 30%;
 }
 
 .areaCadastro #btncadastrar:hover {

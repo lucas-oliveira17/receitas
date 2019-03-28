@@ -1,28 +1,4 @@
-header {
-    text-align: center;
-    background-image: linear-gradient(to top, #f8b460, #fa9d2c);
-    height: 50%;
-}
-
-#cabecalho {
+.helloMsg {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 100px;
-    font-size: 40px;
-}
-
-h1 {
-    margin-top: 0;
-    height: 80px;
-}
-
-hr {
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 1px solid;
-}
-
-body {
-    background-color: #f8b460;
-    margin: 0;
-    padding: 0;
+    font-size: 50px;
 }
