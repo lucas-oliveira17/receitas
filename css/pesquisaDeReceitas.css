@@ -1,3 +1,7 @@
+.sectionPesquisa {
+    display:none;
+}
+
 header {
     text-align: center;
     background-image: linear-gradient(to top, #f8b460, #fa9d2c);

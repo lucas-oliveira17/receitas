@@ -1,21 +1,38 @@
+.sectionCadastro {
+    display:none;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.palavracabecalho {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0;
+    margin-left: 35px;
+    font-size: 25px;
+    margin-top: 10px;
+    color: white;
+}
+
+.palavracabecalho:hover {
+    color: #f37a7a;
+}
+
 #menu li {
-    background-color: #faa741;
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 1px solid #f09b09;
+    background-color: transparent;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: white;
     font-family: Arial;
     font-size: 20px;
     padding: 3px 17px;
     text-decoration: none;
-    text-shadow: 0px 3px 0px #cc9f52;
 }
 
 #menu li:hover {
-    background-color: #fa9519;
+    color: #f07878;
 }
 
 #menu li:active {
