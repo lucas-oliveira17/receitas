@@ -36,10 +36,18 @@ export function retirarValoresInputCadastroReceita() {
     return receita;
 }
 
-export function createHtmlIngredienteInput(counter) {
+export function createHtmlIngredienteInputCadastro(counter) {
     let text = document.createElement("li");
     text.setAttribute("name", "ingrediente")
     text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngrediente" + counter + "'></li>";
+    return text;
+}
+
+export function createHtmlIngredienteInputPesquisa(counter) {
+    let text = document.createElement("li");
+    text.setAttribute("name", "ingrediente")
+    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngrediente" + counter + "'></li>";
+    text.setAttribute("style", "margin:7px")
     return text;
 }
 

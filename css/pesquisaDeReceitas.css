@@ -1,44 +1,27 @@
 .sectionPesquisa {
+    font-family: 'Varela Round', sans-serif;
     display:none;
 }
-
-header {
-    text-align: center;
-    background-image: linear-gradient(to top, #f8b460, #fa9d2c);
-    height: 50%;
-}
-
-#cabecalho {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 100px;
-    font-size: 40px;
-}
-
-h1 {
-    margin-top: 0;
-    height: 80px;
-}
-
-hr {
-    margin-top: 0;
-    margin-bottom: 0;
-    border: 1px solid;
-}
-
-body {
-    text-align: center;
-    background-color: #f8b460;
-    margin: 0;
-    padding: 0;
-}
-
-#textoIntro {
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .menu {
     text-align: center;
+}
+
+.textoIntroPesquisa {
+    margin-top: 6%;
+    font-size: 20px;
+    color: white;
+}
+
+.areaPesquisa{
+    display: inline-block;
+    background-color: rgba(255, 0, 0, 0.151);
+    padding: 3%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
 }
 
 .menu li {
@@ -50,7 +33,6 @@ body {
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-family: Arial;
     font-size: 20px;
     padding: 3px 17px;
     text-decoration: none;
@@ -69,7 +51,7 @@ body {
 
 .textoIngredientes {
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
 }
 
 .camposIngredientePesquisa {
@@ -85,23 +67,15 @@ body {
 }
 
 .camposIngredientePesquisa button {
-    background-color: #faa741;
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 1px solid #f09b09;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-family: Arial;
     font-size: 20px;
-    padding: 3px 17px;
-    text-decoration: none;
-    text-shadow: 0px 3px 0px #cc9f52;
+    margin-top: 10px;
 }
 
-.camposIngredientePesquisa button:hover {
-    background-color: #fa9519;
+.camposIngredientePesquisa li {
+    display: block;
 }
 
 .camposIngredientePesquisa button:active {
@@ -109,12 +83,43 @@ body {
     top: 1px;
 }
 
-#btnok {
-    font-size: 15;
+.camposIngredientePesquisa button:focus {
+    outline:0;
 }
+
+
+.camposIngredientePesquisa #btnaddpesquisa{
+    background-color: transparent;
+    border: none;
+}
+
+.camposIngredientePesquisa #btnaddpesquisa:hover {
+    color: #f37a7a;
+}
+
+.camposIngredientePesquisa #btnok {
+    border: none;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #910909;
+    padding: 4px 13px 4px 13px;
+    text-decoration: none;
+  }
+  
+  .camposIngredientePesquisa #btnok:hover {
+    background: #b30909;
+    background-image: -webkit-linear-gradient(top, #b30909, #910909);
+    background-image: -moz-linear-gradient(top, #b30909, #910909);
+    background-image: -ms-linear-gradient(top, #b30909, #910909);
+    background-image: -o-linear-gradient(top, #b30909, #910909);
+    background-image: linear-gradient(to bottom, #b30909, #910909);
+    text-decoration: none;
+  }
 
 #result {
     display: inline-block;
     font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

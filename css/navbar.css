@@ -8,7 +8,7 @@
 }
 
 .palavracabecalho {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courgette', cursive;
     margin-top: 0;
     margin-left: 35px;
     font-size: 25px;
@@ -20,22 +20,26 @@
     color: #f37a7a;
 }
 
-#menu li {
+ul li{
+    font-family: 'Varela Round', sans-serif;
     background-color: transparent;
     display: inline-block;
     cursor: pointer;
     color: white;
-    font-family: Arial;
     font-size: 20px;
     padding: 3px 17px;
-    text-decoration: none;
+    margin-top: -7px;
 }
 
 #menu li:hover {
-    color: #f07878;
+    border-bottom: 4px solid #910909;
 }
 
 #menu li:active {
     position: relative;
     top: 1px;
+}
+
+#menu li:focus {
+    outline: 0;
 }
