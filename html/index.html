@@ -80,23 +80,24 @@
     <script src='../dist/pesquisa.js' type='text/javascript'></script>
     <script src='../dist/cadastro.js' type='text/javascript'></script>
     <script>
-        document.getElementsByClassName("linkCadastroReceitas")[0].addEventListener("click", function () {
-            document.getElementsByClassName("sectionCadastro")[0].setAttribute("style", "display:block");
-            document.getElementsByClassName("sectionHome")[0].setAttribute("style", "display:none");
-            document.getElementsByClassName("sectionPesquisa")[0].setAttribute("style", "display:none");
-        })
+        function exibeTela(elementoExibido, elementosOcultados) {
+            document.getElementsByClassName(elementoExibido)[0].setAttribute("style", "display:block");
+            elementosOcultados.forEach(elemento => {
+                document.getElementsByClassName(elemento)[0].setAttribute("style", "display:none");
+            });
+        }
 
         document.getElementsByClassName("linkPesquisaReceitas")[0].addEventListener("click", function () {
-            document.getElementsByClassName("sectionCadastro")[0].setAttribute("style", "display:none");
-            document.getElementsByClassName("sectionHome")[0].setAttribute("style", "display:none");
-            document.getElementsByClassName("sectionPesquisa")[0].setAttribute("style", "display:block");
-        })
+            exibeTela("sectionPesquisa", ["sectionCadastro", "sectionHome"]);
+        });
 
         document.getElementsByClassName("linkHome")[0].addEventListener("click", function () {
-            document.getElementsByClassName("sectionCadastro")[0].setAttribute("style", "display:none");
-            document.getElementsByClassName("sectionHome")[0].setAttribute("style", "display:block");
-            document.getElementsByClassName("sectionPesquisa")[0].setAttribute("style", "display:none");
-        })
+            exibeTela("sectionHome", ["sectionCadastro", "sectionPesquisa"]);
+        });
+
+        document.getElementsByClassName("linkCadastroReceitas")[0].addEventListener("click", function () {
+            exibeTela("sectionCadastro", ["sectionHome", "sectionPesquisa"]);
+        });
     </script>
 </body>
 

@@ -5,14 +5,14 @@
 .cabecalho {
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(to right, rgb(247, 14, 14), rgb(173, 4, 4));
 }
 
 .palavracabecalho {
     font-family: 'Courgette', cursive;
-    margin-top: 0;
     margin-left: 35px;
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: 15px;
     color: white;
 }
 
@@ -28,11 +28,10 @@ ul li{
     color: white;
     font-size: 20px;
     padding: 3px 17px;
-    margin-top: -7px;
 }
 
 #menu li:hover {
-    border-bottom: 4px solid #910909;
+    border-bottom: 4px solid #cf0505;
 }
 
 #menu li:active {

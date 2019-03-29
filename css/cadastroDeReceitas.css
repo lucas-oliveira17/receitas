@@ -65,7 +65,7 @@
 }
 
 .areaCadastro #btnaddcadastro:hover {
-    color: #f37a7a;
+    color: #b30606;
 }
 
 .areaCadastro #btnaddcadastro:active {
@@ -75,6 +75,7 @@
 
 .areaCadastro #btncadastrar {
     border: none;
+    cursor: pointer;
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
