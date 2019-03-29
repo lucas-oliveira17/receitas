@@ -10,10 +10,10 @@ export let printReceitas = function (ingrediente) {
         ingredientesReceita = "";
         receita.ingredientes.forEach(ingrediente => {
             ingredientesReceita += `<li> ${ingrediente} </li>` });
-        receitaOutput += `<ul>
+        receitaOutput += `<ul class="ulreceita">
                 <li>Nome: ${receita.nome} </li>
                 <li>Autor: ${receita.autor} </li>
-                <li>Ingredientes:<ul> ${ingredientesReceita}</ul></li>
+                <li>Ingredientes:<ul class="ulingredientes"> ${ingredientesReceita}</ul></li>
                 <li>Modo de Preparo: ${receita.modoDePreparo} </li>
                 </ul>`
             })

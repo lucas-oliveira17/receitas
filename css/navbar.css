@@ -17,10 +17,10 @@
 }
 
 .palavracabecalho:hover {
-    color: #f37a7a;
+    color: #f06666;
 }
 
-ul li{
+.cabecalho ul li{
     font-family: 'Varela Round', sans-serif;
     background-color: transparent;
     display: inline-block;
@@ -31,7 +31,7 @@ ul li{
 }
 
 #menu li:hover {
-    border-bottom: 4px solid #cf0505;
+    border-bottom: 4px solid #d34b4b;
 }
 
 #menu li:active {

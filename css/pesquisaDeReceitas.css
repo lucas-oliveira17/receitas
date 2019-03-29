@@ -1,7 +1,8 @@
 .sectionPesquisa {
     font-family: 'Varela Round', sans-serif;
-    display:none;
+    display: none;
 }
+
 .menu {
     text-align: center;
 }
@@ -12,7 +13,7 @@
     color: white;
 }
 
-.areaPesquisa{
+.areaPesquisa {
     display: inline-block;
     background-color: rgba(255, 0, 0, 0.151);
     padding: 3%;
@@ -24,31 +25,6 @@
     box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
 }
 
-.menu li {
-    background-color: #faa741;
-    -moz-border-radius: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    border: 1px solid #f09b09;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 3px 17px;
-    text-decoration: none;
-    text-shadow: 0px 3px 0px #cc9f52;
-    margin: 5px;
-}
-
-.menu li:hover {
-    background-color: #fa9519;
-}
-
-.menu li:active {
-    position: relative;
-    top: 1px;
-}
-
 .textoIngredientes {
     font-size: 20px;
     color: #ffffff;
@@ -58,7 +34,7 @@
     padding-top: 4px;
 }
 
-.camposIngredientePesquisa input{
+.camposIngredientePesquisa input {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
@@ -84,11 +60,11 @@
 }
 
 .camposIngredientePesquisa button:focus {
-    outline:0;
+    outline: 0;
 }
 
 
-.camposIngredientePesquisa #btnaddpesquisa{
+.camposIngredientePesquisa #btnaddpesquisa {
     background-color: transparent;
     border: none;
 }
@@ -107,9 +83,9 @@
     background: #910909;
     padding: 4px 13px 4px 13px;
     text-decoration: none;
-  }
-  
-  .camposIngredientePesquisa #btnok:hover {
+}
+
+.camposIngredientePesquisa #btnok:hover {
     background: #b30909;
     background-image: -webkit-linear-gradient(top, #b30909, #910909);
     background-image: -moz-linear-gradient(top, #b30909, #910909);
@@ -117,9 +93,32 @@
     background-image: -o-linear-gradient(top, #b30909, #910909);
     background-image: linear-gradient(to bottom, #b30909, #910909);
     text-decoration: none;
-  }
+}
 
-#result {
-    display: inline-block;
-    font-size: 20px;
+#resultPesquisa {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-family: 'Courgette', cursive;
+}
+
+#resultPesquisa ul {
+    color: rgb(211, 9, 9);
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: column;
+    list-style-type: none;
+    display: inline-flex;
+    flex-direction: column;
+    /* border: solid black 3px; */
+    margin-right: 20px;
+}
+
+.ulreceita {
+    border-bottom: solid 8px #b30606;
+    background-color: white;
+    padding: 2%;
+    -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
 }

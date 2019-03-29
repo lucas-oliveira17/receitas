@@ -4,7 +4,7 @@ export function retirarValoresInput(elemento) {
     let arrayDeNos = passarNosParaArray(nos);
     let input = [];
     arrayDeNos.forEach(no => {
-        input.push(no.children[0].value);
+        input.push(no.value);
     });
     return input;
 }
