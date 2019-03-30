@@ -23,14 +23,13 @@ export function retirarValoresInputCadastroReceita() {
         document.querySelector('input[name="modopreparo"]').value
     ];
 
-    const ingredienteLiFilhos = document.querySelector('ul[id="camposIngrediente"').children;
+    const ingredienteLiFilhos = document.querySelector('ul[id="camposIngredienteCadastro"').children;
+    console.log(ingredienteLiFilhos);
     let ingredientes = [];
     let campo;
 
-    for (campo in ingredienteLiFilhos) {
-        if (campo > 0) {
-            ingredientes.push(ingredienteLiFilhos[campo].children[0].value);
-        }
+    for (let campo = 0; campo < ingredienteLiFilhos.length; campo++) {
+        ingredientes.push(ingredienteLiFilhos[campo].childNodes[0].value);
     }
     receita.push(ingredientes);
     return receita;
@@ -39,14 +38,14 @@ export function retirarValoresInputCadastroReceita() {
 export function createHtmlIngredienteInputCadastro(counter) {
     let text = document.createElement("li");
     text.setAttribute("name", "ingrediente")
-    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngrediente" + counter + "'></li>";
+    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngredienteCadastro" + counter + "'></li>";
     return text;
 }
 
 export function createHtmlIngredienteInputPesquisa(counter) {
     let text = document.createElement("li");
     text.setAttribute("name", "ingrediente")
-    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngrediente" + counter + "'></li>";
+    text.innerHTML = "<input type='text' placeholder=' Ingrediente' id='campoIngredientePesquisa" + counter + "'></li>";
     text.setAttribute("style", "margin:7px")
     return text;
 }

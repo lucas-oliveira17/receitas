@@ -8,6 +8,7 @@
 }
 
 #textoIntroCadastro {
+    font-family: 'ZCOOL XiaoWei', serif;
     text-align: center;
     font-size: 20px;
     color: #ffffff;
@@ -15,14 +16,11 @@
 }
 
 .areaCadastro {
-    background-color: rgba(255, 0, 0, 0.151);
     display: table-caption;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.192);
-    -moz-box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 7px 5px 7px 0px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, rgb(247, 14, 14), rgb(173, 4, 4));
+    -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
 }
 
 .camposCadastro {
@@ -39,11 +37,16 @@
 }
 
 .camposCadastro input {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    border: none;
-    padding: 3px;
+    background-color: transparent;
+    background-size: 100% 0px;
+    border: 0;
+    border-bottom: 3px solid rgba(247, 212, 212, 0.952);
+    outline:0;
+    color: white;
+}
+
+.camposCadastro ::placeholder{
+    color: white;
 }
 
 .camposCadastro #camposIngredienteCadastro {
@@ -76,15 +79,16 @@
 .areaCadastro #btncadastrar {
     border: none;
     cursor: pointer;
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 14px;
     background: #910909;
-    padding: 4px 13px 4px 13px;
+    padding: 2px 11px 3px 10px;
     text-decoration: none;
-    margin-bottom: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 12px;
 }
 
 .areaCadastro #btncadastrar:hover {

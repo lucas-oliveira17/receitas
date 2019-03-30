@@ -12,7 +12,7 @@
     font-family: 'Courgette', cursive;
     margin-left: 35px;
     font-size: 25px;
-    margin-top: 15px;
+    margin-top: 20px;
     color: white;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .cabecalho ul li{
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: transparent;
     display: inline-block;
     cursor: pointer;
@@ -31,7 +31,7 @@
 }
 
 #menu li:hover {
-    border-bottom: 4px solid #d34b4b;
+    color: #f06666;
 }
 
 #menu li:active {
