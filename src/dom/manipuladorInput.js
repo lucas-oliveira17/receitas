@@ -1,6 +1,5 @@
 export function retirarValoresInput(elemento) {
     let nos = pegarNos(elemento);
-    console.log(nos);
     let arrayDeNos = passarNosParaArray(nos);
     let input = [];
     arrayDeNos.forEach(no => {
@@ -24,7 +23,6 @@ export function retirarValoresInputCadastroReceita() {
     ];
 
     const ingredienteLiFilhos = document.querySelector('ul[id="camposIngredienteCadastro"').children;
-    console.log(ingredienteLiFilhos);
     let ingredientes = [];
     let campo;
 

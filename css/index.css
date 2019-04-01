@@ -6,7 +6,7 @@ body {
 }
 
 .bg {
-    background: linear-gradient(to bottom,rgba(233, 7, 7, 0.568) 0,rgba(65, 13, 13, 0.637) 100%), url(../img/food-1932466_1920\ \(2\).jpg);
+    background: linear-gradient(to bottom,rgba(44, 41, 41, 0.568) 0,rgba(100, 15, 15, 0.637) 100%), url(../img/food-1932466_1920\ \(2\).jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;

@@ -5,7 +5,7 @@ function pressCadastrar() {
     document.getElementById("btncadastrar").addEventListener("click", function () {
         let conteudoCadastro = retirarValoresInputCadastroReceita("camposCadastro");
         cadastrarReceita(conteudoCadastro);
-        document.getElementById("resultCadastro").innerHTML += `Receita cadastrada com sucesso!`;
+        document.getElementById("resultCadastro").innerHTML = `Receita cadastrada com sucesso!`;
     });
 }
 
