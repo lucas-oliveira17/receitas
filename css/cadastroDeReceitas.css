@@ -1,5 +1,6 @@
 .sectionCadastro {
     font-family: 'Varela Round', sans-serif;
+    transition: opacity 300ms ease-in-out 1s;
 }
 
 .centerCadastro {
@@ -17,7 +18,9 @@
 }
 
 .areaCadastro {
-    display: table-caption;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
     background: linear-gradient(to right, rgb(247, 14, 14), rgb(173, 4, 4));
     -webkit-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.75);

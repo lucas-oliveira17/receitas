@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+
 <head>
     <meta charset="utf-8">
     <title>Reditus</title>
@@ -49,8 +50,8 @@
                         <li class="autorli"><input type="text" placeholder=" Autor" name="autor" id="autorid"></li>
 
                         <ul id="camposIngredienteCadastro">
-                            <li><input type="text" placeholder=" Ingrediente" name="ingrediente" id="campoIngrediente0"><button
-                                    id="btnaddcadastro">+</button></li>
+                            <li><input type="text" placeholder=" Ingrediente" name="ingrediente"
+                                    id="campoIngrediente0"><button id="btnaddcadastro">+</button></li>
                         </ul>
 
                         <li class="modopreparoli"><input type="text" placeholder=" Modo de Preparo" name="modopreparo"
@@ -69,9 +70,9 @@
                 <div class="camposIngredientePesquisa">
                     <div id="ingrediente"><input type="text" placeholder=" Ingrediente" id="campoIngrediente0"></div>
                     <div class="buttonsPesquisa">
-                    <button id="btnaddpesquisa">+</button>
-                    <button id="btnok">Pesquisar</button>
-                </div>
+                        <button id="btnaddpesquisa">+</button>
+                        <button id="btnok">Pesquisar</button>
+                    </div>
                 </div>
             </div>
             <div id="resultPesquisa"></div>
@@ -79,8 +80,6 @@
 
 
     </div>
-    <script src='../dist/pesquisa.js' type='text/javascript'></script>
-    <script src='../dist/cadastro.js' type='text/javascript'></script>
     <script>
         function exibeTela(elementoExibido, elementosOcultados) {
             document.getElementsByClassName(elementoExibido)[0].setAttribute("style", "display:block");
@@ -100,7 +99,11 @@
         document.getElementsByClassName("linkCadastroReceitas")[0].addEventListener("click", function () {
             exibeTela("sectionCadastro", ["sectionHome", "sectionPesquisa"]);
         });
+
+        let receitasPadrao = [];
     </script>
+        <script src='../dist/pesquisa.js' type='text/javascript'></script>
+        <script src='../dist/cadastro.js' type='text/javascript'></script>
 </body>
 
 </html>

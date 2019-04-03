@@ -24,7 +24,6 @@ export function retirarValoresInputCadastroReceita() {
 
     const ingredienteLiFilhos = document.querySelector('ul[id="camposIngredienteCadastro"').children;
     let ingredientes = [];
-    let campo;
 
     for (let campo = 0; campo < ingredienteLiFilhos.length; campo++) {
         ingredientes.push(ingredienteLiFilhos[campo].childNodes[0].value);
